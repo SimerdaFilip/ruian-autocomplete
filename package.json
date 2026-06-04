@@ -1,7 +1,7 @@
 {
   "name": "@simerda/ruian-autocomplete",
   "version": "1.0.0",
-  "description": "Zero-dependency Czech address autocomplete backed by the ČÚZK RÚIAN service.",
+  "description": "Czech address autocomplete, straight from the browser — no backend, zero dependencies (ČÚZK RÚIAN).",
   "type": "module",
   "main": "ruian-autocomplete.js",
   "module": "ruian-autocomplete.js",

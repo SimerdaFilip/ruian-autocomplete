@@ -5,7 +5,7 @@
 [![license](https://img.shields.io/npm/l/@simerda/ruian-autocomplete)](./LICENSE)
 [![CI](https://github.com/SimerdaFilip/ruian-autocomplete/actions/workflows/ci.yml/badge.svg)](https://github.com/SimerdaFilip/ruian-autocomplete/actions/workflows/ci.yml)
 
-Našeptávač českých adres přímo z prohlížeče, bez backendu.
+Czech address autocomplete — straight from the browser, no backend.
 
 Czech address autocomplete that talks to the **ČÚZK RÚIAN** address service
 straight from the browser. Zero dependencies, no build step, plain ES modules.
