@@ -137,9 +137,18 @@ input.addEventListener('ruian:select', (e) => {
 | `debounce` | `200`         | Debounce in ms.                                         |
 | `limit`    | `10`          | Max suggestions.                                        |
 | `onSelect` | —             | Callback `(suggestion) => void`.                        |
+| `messages` | English       | UI strings, e.g. `{ noResults: 'No results found' }`.   |
+
+All user-facing text defaults to English. Override it through `messages`:
+
+```js
+RuianAutocomplete.attach(input, {
+  messages: { noResults: 'Nic nenalezeno' }, // e.g. switch to Czech
+});
+```
 
 Custom-element attributes mirror these: `endpoint`, `base`, `layer-id`, `min-chars`,
-`debounce`, `limit`, `placeholder`, `name`.
+`debounce`, `limit`, `placeholder`, `name`, `no-results`.
 
 ## Theming
 

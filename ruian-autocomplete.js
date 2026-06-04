@@ -146,6 +146,8 @@ class Autocomplete {
       debounce: 200,
       limit: 10,
       ...options,
+      // User-facing strings default to English; override via the `messages` option.
+      messages: { noResults: 'No results found', ...(options.messages || {}) },
     };
     this.suggestions = [];
     this.activeIndex = -1;
@@ -254,7 +256,7 @@ class Autocomplete {
       const empty = doc.createElement('li');
       empty.className = 'ruian-ac-empty';
       empty.setAttribute('role', 'option');
-      empty.textContent = 'Nic nenalezeno';
+      empty.textContent = this.options.messages.noResults;
       this.list.appendChild(empty);
       this._show();
       return;
@@ -425,6 +427,9 @@ if (typeof customElements !== 'undefined' && typeof HTMLElement !== 'undefined')
       if (this.hasAttribute('name')) this._input.name = this.getAttribute('name');
       if (!this._input.parentNode) this.appendChild(this._input);
 
+      const messages = {};
+      if (this.hasAttribute('no-results')) messages.noResults = this.getAttribute('no-results');
+
       this._controller = RuianAutocomplete.attach(this._input, {
         base: this.getAttribute('base') || undefined,
         layerId: numAttr(this, 'layer-id'),
@@ -432,6 +437,7 @@ if (typeof customElements !== 'undefined' && typeof HTMLElement !== 'undefined')
         minChars: numAttr(this, 'min-chars') ?? 2,
         debounce: numAttr(this, 'debounce') ?? 200,
         limit: numAttr(this, 'limit') ?? 10,
+        messages,
       });
     }
 
