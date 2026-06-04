@@ -1,0 +1,63 @@
+.ruian-ac {
+  --ruian-ac-bg: #fff;
+  --ruian-ac-border: #d0d7de;
+  --ruian-ac-radius: 8px;
+  --ruian-ac-shadow: 0 8px 24px rgba(31, 35, 40, 0.12);
+  --ruian-ac-option-hover: #f3f6fb;
+  --ruian-ac-option-active: #e7f0ff;
+  --ruian-ac-highlight: #1f6feb;
+  --ruian-ac-muted: #6b7280;
+  --ruian-ac-fg: #1f2328;
+  --ruian-ac-max-height: 18rem;
+
+  position: relative;
+  display: block;
+}
+
+.ruian-ac-list {
+  position: absolute;
+  inset-inline: 0;
+  top: calc(100% + 4px);
+  z-index: 50;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  max-height: var(--ruian-ac-max-height);
+  overflow-y: auto;
+  background: var(--ruian-ac-bg);
+  border: 1px solid var(--ruian-ac-border);
+  border-radius: var(--ruian-ac-radius);
+  box-shadow: var(--ruian-ac-shadow);
+  color: var(--ruian-ac-fg);
+}
+
+.ruian-ac-list[hidden] {
+  display: none;
+}
+
+.ruian-ac-option {
+  padding: 8px 10px;
+  border-radius: calc(var(--ruian-ac-radius) - 3px);
+  cursor: pointer;
+  line-height: 1.35;
+}
+
+.ruian-ac-option:hover {
+  background: var(--ruian-ac-option-hover);
+}
+
+.ruian-ac-option.is-active {
+  background: var(--ruian-ac-option-active);
+}
+
+.ruian-ac-mark {
+  background: transparent;
+  color: var(--ruian-ac-highlight);
+  font-weight: 600;
+}
+
+.ruian-ac-empty {
+  padding: 8px 10px;
+  color: var(--ruian-ac-muted);
+  font-style: italic;
+}

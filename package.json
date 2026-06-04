@@ -1,0 +1,46 @@
+{
+  "name": "@simerda/ruian-autocomplete",
+  "version": "1.0.0",
+  "description": "Zero-dependency Czech address autocomplete backed by the ČÚZK RÚIAN service.",
+  "type": "module",
+  "main": "ruian-autocomplete.js",
+  "module": "ruian-autocomplete.js",
+  "exports": {
+    ".": "./ruian-autocomplete.js",
+    "./css": "./ruian-autocomplete.css"
+  },
+  "sideEffects": [
+    "./ruian-autocomplete.js"
+  ],
+  "files": [
+    "ruian-autocomplete.js",
+    "ruian-autocomplete.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "ruian",
+    "czech",
+    "address",
+    "autocomplete",
+    "cuzk",
+    "adresy",
+    "našeptávač"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimerdaFilip/ruian-autocomplete.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SimerdaFilip/ruian-autocomplete/issues"
+  },
+  "homepage": "https://github.com/SimerdaFilip/ruian-autocomplete#readme",
+  "author": "Filip Šimerda",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
